@@ -6,6 +6,8 @@ import android.content.ServiceConnection
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.IBinder
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import androidx.lifecycle.Lifecycle
@@ -74,7 +76,27 @@ class MainActivity : AppCompatActivity() {
 
         stopButton.setOnClickListener {
             timerBinder?.stop()
+            startButton.setText(R.string.start)
 
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_start_timer -> {
+                startButton.performClick()
+                true
+            }
+            R.id.action_stop_timer -> {
+                stopButton.performClick()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }

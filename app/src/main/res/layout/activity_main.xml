@@ -8,24 +8,29 @@
 
     <Button
         android:id="@+id/startButton"
-        android:layout_width="100dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="#00FF00"
-        android:text="Start"
-        app:layout_constraintBottom_toBottomOf="@+id/stopButton"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="@string/start"
+        android:textColor="#000000"
+        android:textAllCaps="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <Button
         android:id="@+id/stopButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="220dp"
-        android:backgroundTint="#ff0000"
-        android:text="Stop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FF0000"
+        android:text="@string/stop"
+        android:textColor="#000000"
+        android:textAllCaps="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -33,7 +38,7 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="96sp"
-        app:layout_constraintBottom_toTopOf="@+id/stopButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
